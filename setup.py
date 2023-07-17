@@ -1,14 +1,13 @@
 from setuptools import setup, find_packages
 
-from claude import __version__
 
 setup(
-    name='claude',
-    version=__version__,
-    url='https://github.com/AshwinPathi/claude',
+    name='claude_ai',
+    version='0.0.1',
+    url='https://github.com/boyueluzhipeng/claude_ai',
     py_modules=find_packages(),
 
     install_requires=[
-        'sseclient',
+        'requests',
     ],
 )
