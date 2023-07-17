@@ -7,15 +7,15 @@ This library provides a simple way to interact with the Claude AI API. You can u
 First, you need to install this library. You can do this via pip:
 
 ```bash
-pip install claude_ai
+pip install clauderevised
 ```
 
 ## Usage
 
-First, you need to import the `ClaudeAPIWrapper` class from `claude_ai.claude`. Then, you can create a `ClaudeAPIWrapper` object using your session key.
+First, you need to import the `ClaudeAPIWrapper` class from `clauderevised.claude`. Then, you can create a `ClaudeAPIWrapper` object using your session key.
 
 ```python
-from claude_ai.claude import ClaudeAPIWrapper
+from clauderevised.claude import ClaudeAPIWrapper
 
 session_key = "your session key"
 api = ClaudeAPIWrapper(session_key)

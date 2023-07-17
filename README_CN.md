@@ -7,15 +7,15 @@
 首先，你需要安装这个库。你可以通过pip来进行安装：
 
 ```bash
-pip install claude_ai
+pip install clauderevised
 ```
 
 ## 使用
 
-首先，你需要从`claude_ai.claude`中导入`ClaudeAPIWrapper`类。然后，你可以使用你的会话密钥创建一个`ClaudeAPIWrapper`对象。
+首先，你需要从`clauderevised.claude`中导入`ClaudeAPIWrapper`类。然后，你可以使用你的会话密钥创建一个`ClaudeAPIWrapper`对象。
 
 ```python
-from claude_ai.claude import ClaudeAPIWrapper
+from clauderevised.claude import ClaudeAPIWrapper
 
 session_key = "你的会话密钥"
 api = ClaudeAPIWrapper(session_key)

@@ -2,11 +2,10 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='claude_ai',
-    version='0.0.1',
+    name='clauderevised',
+    version='0.0.2',
     url='https://github.com/boyueluzhipeng/claude_ai',
-    py_modules=find_packages(),
-
+    packages=['clauderevised'],
     install_requires=[
         'requests',
     ],
