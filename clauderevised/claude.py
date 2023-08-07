@@ -76,7 +76,18 @@ class ClaudeAPIWrapper:
             message_chunk = message_chunk.decode('utf-8')
             if message_chunk.strip() == '':
                 continue
+            # print(message_chunk[6:])
             message_json = json.loads(message_chunk[6:])  # Skip the 'data: ' prefix
             if "stop_reason" in message_json and message_json["stop_reason"] is not None:
                 break
             yield message_json["completion"]
+
+    def get_flags(self,uuidOrg,active_flags):
+        for flag in active_flags:
+            print(flag['type'])
+            url = f"https://claude.ai//api/organizations/{uuidOrg}/flags/{flag['type']}/dismiss"
+            response = requests.request("POST", url, headers=self.headers)
+            j = json.loads(response.text)
+            print(j)
+
+        
