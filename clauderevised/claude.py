@@ -82,12 +82,13 @@ class ClaudeAPIWrapper:
                 break
             yield message_json["completion"]
 
-    def get_flags(self,uuidOrg,active_flags):
+    def diss_flags(self,uuidOrg,active_flags):
         for flag in active_flags:
-            print(flag['type'])
+            print('start diss flag type :'+flag['type'])
             url = f"https://claude.ai//api/organizations/{uuidOrg}/flags/{flag['type']}/dismiss"
             response = requests.request("POST", url, headers=self.headers)
             j = json.loads(response.text)
             print(j)
+            print('end diss flag type :')
 
         
